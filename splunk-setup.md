@@ -11,7 +11,7 @@ The purpose of this setup is to ingest and analyze security logs in order to pra
 
 **SIEM Platform:** Splunk  
 **Deployment Type:** Local installation  
-**Operating System:** (Add your OS here)  
+**Operating System:** Windows 11
 **Log Sources:** (Example: Windows Event Logs, sample datasets)
 
 ---
