@@ -103,3 +103,49 @@ Analysts must validate:
 4. metadata
 
 Rather than assuming standardized conventions.
+
+---
+
+# Authentication Event Analysis
+
+## Failed Login Events
+
+Search used:
+
+```spl
+index=botsv3 LogName=Security EventCode=4625
+| stats count by Account_Name
+| sort -count
+```
+
+---
+
+## Purpose
+
+This query was used to identify accounts associated with failed authentication attempts
+
+---
+
+## Skills Practiced
+1. SPL query construction
+2. Filtering Windows Security logs
+3. Event validation
+4. Basic statistical analysis
+5. Authentication event investigation
+
+---
+
+## Current Progress
+
+Current SIEM learning progress includes:
+
+1. Splunk installation and setup
+2. BOTSv3 dataset ingestion
+3. SPL search fundamentals
+4. Windows Event Log analysis
+5. Authentication event investigation
+6. Field and sourcetype analysis
+7. Query troubleshooting
+8. Security log validation
+
+---
