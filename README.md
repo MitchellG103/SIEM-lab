@@ -2,75 +2,107 @@
 
 ## Project Overview
 
-This project documents a beginner Security Information and Event Management (SIEM) lab used to learn the fundamentals of log analysis, event investigation, and detection development.
+This project documents my hands-on learning experience with Security Information and Event Management (SIEM) concepts using Splunk Enterprise and the Splunk BOTSv3 dataset.
 
-The purpose of this lab is to gain hands-on experience working with security logs and understanding how security analysts use SIEM platforms to monitor systems and investigate potential security events.
+The goal of this lab is to learn how security analysts use SIEM platforms to ingest, search, filter, and analyze security logs in order to investigate authentication activity and identify potentially suspicious behavior.
 
-This lab focuses on learning how to search logs, identify suspicious activity, and document investigation findings.
-
----
-
-## Tools Used
-
-- Splunk (SIEM platform)
-- Windows Event Logs
-- Sample log datasets for analysis
-
----
-
-## Lab Objectives
-
-The primary objectives of this lab include:
-
-- Learning how a SIEM platform ingests and indexes log data
-- Practicing log searches to identify specific security events
-- Investigating authentication activity such as successful and failed login attempts
-- Understanding how suspicious activity can be detected through log analysis
-- Practicing documentation of security investigations
+This repository focuses on building foundational SIEM and SOC analyst skills through practical log analysis and SPL (Search Processing Language) queries.
 
 ---
 
 ## Lab Environment
 
-The SIEM lab environment consists of a locally deployed Splunk instance used to ingest and analyze security logs. Log datasets were imported into the platform to simulate activity that a security analyst might review in a real environment.
+The lab environment consists of a locally deployed Splunk Enterprise instance configured with the BOTSv3 dataset and supporting Splunk add-ons.
 
-The lab focuses on analyzing event logs and identifying patterns that may indicate suspicious or malicious behavior.
+The dataset contains realistic Windows and network log data used to simulate activity that a security analyst may encounter in a real environment.
+
+Logs Used:
+- Windows Security Event Logs
+- Windows Application Logs
+- Additional BOTSv3 log sources
+
+BOTSv3 Dataset:
+https://github.com/splunk/botsv3
 
 ---
 
-## Investigations Performed
+## Tools Used
 
-The following investigations were conducted during this lab:
+- Splunk Enterprise
+- Splunk Search & Reporting App
+- SPL (Search Processing Language)
+- Windows Event Logs
+- BOTSv3 Dataset
 
-- Analysis of failed login attempts
-- Identification of successful authentication events
-- Review of user activity within system logs
-- Basic log searches to identify unusual patterns
+---
 
-Each investigation includes the search queries used, observations from the logs, and documentation of the analysis process.
+## Current Learning Objectives
+
+The primary objectives of this lab include:
+
+- Learning how Splunk ingests and indexes log data
+- Understanding how different log sources are structured
+- Practicing SPL searches and filtering techniques
+- Investigating Windows authentication events
+- Identifying failed and successful login activity
+- Learning how analysts validate log sources and event context
+- Documenting findings and investigation workflows
+
+---
+
+## Topics Explored
+
+Current topics explored within this lab include:
+
+- Windows Security Event IDs
+- Failed login analysis (EventCode 4625)
+- Successful login analysis (EventCode 4624)
+- Log source validation
+- Sourcetype and field analysis
+- SPL query troubleshooting
+- Event filtering and data exploration
+
+---
+
+## Repository Contents
+
+### splunk-setup.md
+Documents the installation and configuration of Splunk Enterprise, BOTSv3 setup, add-ons, and log ingestion.
+
+### log-analysis.md
+Contains investigation notes, observations, event analysis, and lessons learned during log analysis.
+
+### spl-queries.md
+Documents useful SPL queries, their purpose, and how they were used during investigations.
+
+### screenshots/
+Contains screenshots of Splunk searches, statistics views, and investigation results.
 
 ---
 
 ## Skills Practiced
 
-This lab demonstrates several foundational cybersecurity and SOC analyst skills:
+This lab demonstrates foundational cybersecurity and SOC analyst skills including:
 
 - SIEM log analysis
-- Event investigation
-- Security monitoring concepts
-- Detection of suspicious activity
+- SPL query development
+- Security event investigation
+- Windows Event Log analysis
+- Log source validation
+- Data filtering and correlation
 - Security documentation
 
 ---
 
-## Future Improvements
+## Future Goals
 
-This lab represents an introduction to SIEM log analysis. Future improvements may include:
+As I continue learning Splunk and SIEM workflows, future improvements may include:
 
-- Creating detection rules for suspicious activity
-- Building dashboards for monitoring security events
-- Simulating attack scenarios and investigating them through log analysis
-- Expanding log sources such as firewall or web server logs
+- Building dashboards and visualizations
+- Creating basic detection searches
+- Correlating authentication events
+- Investigating simulated attack activity
+- Expanding into additional log sources and security telemetry
 
 ---
 
