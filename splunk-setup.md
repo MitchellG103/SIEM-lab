@@ -13,7 +13,7 @@ The purpose of this setup is to ingest and analyze security logs in order to pra
 **Deployment Type:** Local installation  
 **Operating System:** Windows 11 
 
-**Log Sources:** (Example: Windows Event Logs, sample datasets)
+**Log Sources:** Boss of the SOC (BOTS) Dataset Version 3 (https://github.com/splunk/botsv3)
 
 ---
 
