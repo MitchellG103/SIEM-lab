@@ -133,19 +133,4 @@ This query was used to identify accounts associated with failed authentication a
 4. Basic statistical analysis
 5. Authentication event investigation
 
----
 
-## Current Progress
-
-Current SIEM learning progress includes:
-
-1. Splunk installation and setup
-2. BOTSv3 dataset ingestion
-3. SPL search fundamentals
-4. Windows Event Log analysis
-5. Authentication event investigation
-6. Field and sourcetype analysis
-7. Query troubleshooting
-8. Security log validation
-
----
