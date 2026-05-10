@@ -20,3 +20,13 @@ The goal of this investigation was to identify failed Windows authentication eve
 
 ```spl
 index=botsv3 "4625"
+```
+
+---
+
+## Observation
+
+This broad search returned multiple results associated with the value 4625. The initial assumption was that these were Windows Failed login events. 
+Most of these results were actually unrelated to failed login attempts. Upon further analysis many originated from Windows Application logs rather than Windows Security logs. 
+This demonstrated the importance of validating log context instead of solely relying on event IDs. Many log types may share the same event ID that mean different things to different log types.
+This mistake could have led to false reporting and further expenditure of resources unnecessarily. Luckily verification of the logs allowed this to all be avoided, if this were a real world scenario. 
