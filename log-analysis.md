@@ -41,7 +41,7 @@ The next phase of analysis focused on finding legitimate Windows Security authen
 
 ---
 
-##Refined Search
+## Refined Search
 
 ```spl
 index=botsv3 LogName=Security "4625"
@@ -49,7 +49,7 @@ index=botsv3 LogName=Security "4625"
 
 ---
 
-##Findings
+## Findings
 
 This search successfully identified Windows Security authentication logs associated with failed login activity. 
 The returned events included:
@@ -65,12 +65,12 @@ This confirmed the events were legitimate Windows Failed login attempts.
 
 During investigation, several searches returned unexpected or empty results due to assumptions about sourcetypes and field names.
 
-##Example failed search:
+## Example failed search:
 
 ```spl
 index=botsv3 sourcetype=WinEventLog:Security EventCode=4625
 ```
-##Observation
+## Observation
 
 This search returned no results because the dataset used: 
 
@@ -88,7 +88,7 @@ Instead of using the sourcetype itself
 
 ---
 
-##Key Lesson
+## Key Lesson
 
 SIEM environments may structure and normalize logs differently depending on:
 1. log sources
