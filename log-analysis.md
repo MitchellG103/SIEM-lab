@@ -85,3 +85,21 @@ LogName=Security
 ```
 
 Instead of using the sourcetype itself
+
+---
+
+##Key Lesson
+
+SIEM environments may structure and normalize logs differently depending on:
+1. log sources
+2. add-ons
+3. parsing configurations
+4. ingestion methods
+
+Analysts must validate:
+1. sourcetypes
+2. field names
+3. log channels
+4. metadata
+
+Rather than assuming standardized conventions.
