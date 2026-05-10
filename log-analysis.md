@@ -62,3 +62,26 @@ This confirmed the events were legitimate Windows Failed login attempts.
 ---
 
 # SPL Troubleshooting Lessons Learned
+
+During investigation, several searches returned unexpected or empty results due to assumptions about sourcetypes and field names.
+
+##Example failed search:
+
+```spl
+index=botsv3 sourcetype=WinEventLog:Security EventCode=4625
+```
+##Observation
+
+This search returned no results because the dataset used: 
+
+```spl
+sourcetype=WinEventLog:Security 
+```
+
+While the security log channel was identified through:
+
+```spl
+LogName=Security 
+```
+
+Instead of using the sourcetype itself
