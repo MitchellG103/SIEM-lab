@@ -61,6 +61,57 @@ This confirmed the events were legitimate Windows Failed login attempts.
 
 ---
 
+# Investigation 3: Successful Authentication Events
+
+## Objective
+
+After identifying failed authentication events associated with EventCode 4625, the next phase of analysis focused on successful Windows authentication events using EventCode 4624.
+
+The purpose of this investigation was to compare successful and failed login activity and better understand authentication patterns within Windows Security logs.
+
+---
+
+## Search Performed
+
+```spl
+index=botsv3 LogName=Security EventCode=4624
+```
+
+---
+
+## Findings
+
+This search returned a significantly larger number of results compared to failed authentication events associated with EventCode 4625.
+This observation is expected because successful login activity occurs much more frequently in normal system operations.
+
+The returned events represented legitimate Windows Security authentication activity and included:
+1. Successful user logins
+2. System authentication activity
+3. Service account logins
+4. Additional authentication-related events
+
+---
+
+# Authentication Event Analysis
+
+## Failed Login Events
+
+Search used:
+
+```spl
+index=botsv3 LogName=Security EventCode=4625
+| stats count by Account_Name
+| sort -count
+```
+
+---
+
+## Purpose
+
+This query was used to identify accounts associated with failed authentication attempts
+
+---
+
 # SPL Troubleshooting Lessons Learned
 
 During investigation, several searches returned unexpected or empty results due to assumptions about sourcetypes and field names.
@@ -106,23 +157,13 @@ Rather than assuming standardized conventions.
 
 ---
 
-# Authentication Event Analysis
+# Lessons Learned
 
-## Failed Login Events
-
-Search used:
-
-```spl
-index=botsv3 LogName=Security EventCode=4625
-| stats count by Account_Name
-| sort -count
-```
-
----
-
-## Purpose
-
-This query was used to identify accounts associated with failed authentication attempts
+This investigation demonstrated several important SIEM concepts:
+1. Successful authentication events are typically far more common than failed authentication events
+2. Windows environments generate large amounts of normal authentication activity
+3. Analysts must distinguish between expected system behavior and suspicious patterns
+4. Authentication analysis often requires filtering and narrowing results to identify meaningful activity
 
 ---
 
@@ -132,5 +173,3 @@ This query was used to identify accounts associated with failed authentication a
 3. Event validation
 4. Basic statistical analysis
 5. Authentication event investigation
-
-
