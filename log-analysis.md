@@ -30,3 +30,22 @@ This broad search returned multiple results associated with the value 4625. The 
 Most of these results were actually unrelated to failed login attempts. Upon further analysis many originated from Windows Application logs rather than Windows Security logs. 
 This demonstrated the importance of validating log context instead of solely relying on event IDs. Many log types may share the same event ID that mean different things to different log types.
 This mistake could have led to false reporting and further expenditure of resources unnecessarily. Luckily verification of the logs allowed this to all be avoided, if this were a real world scenario. 
+
+---
+
+# Investigation 2: Identifying Legitimate Security Authentication Events
+
+##Objective
+
+The next phase of analysis focused on finding legitimate Windows Security authentication logs. 
+
+---
+
+##Refined Search
+
+```spl
+index=botsv3 LogName=Security "4625"
+```
+
+---
+
