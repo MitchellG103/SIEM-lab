@@ -63,4 +63,5 @@ This confirmed that log data was successfully indexed and searchable.
 ## Notes
 
 This lab environment is intended for educational purposes and focuses on learning how SIEM platforms ingest and analyze security logs.
+
 The logs used can be found [here](https://github.com/splunk/botsv3)
