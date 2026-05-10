@@ -22,7 +22,8 @@ The purpose of this setup is to ingest and analyze security logs in order to pra
 1. Downloaded Splunk from the official website.
 2. Installed the platform on a local system.
 3. Started the Splunk service.
-4. Accessed the Splunk web interface through the local web console.
+4. Install all necessary addons (https://github.com/splunk/botsv3).
+5. Accessed the Splunk web interface through the local web console.
 
 Example interface access:
 
