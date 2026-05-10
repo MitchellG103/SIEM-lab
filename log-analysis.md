@@ -19,4 +19,4 @@ The goal of this investigation was to identify failed Windows authentication eve
 ## Initial Search
 
 ```spl
-index=botsv3 4625
+index=botsv3 "4625"
