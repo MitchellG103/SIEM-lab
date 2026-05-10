@@ -49,3 +49,16 @@ index=botsv3 LogName=Security "4625"
 
 ---
 
+##Findings
+
+This search successfully identified Windows Security authentication logs associated with failed login activity. 
+The returned events included:
+1. LogName=Security
+2. SourceName=Microsoft Windows security auditing
+3. EventCode=4625
+
+This confirmed the events were legitimate Windows Failed login attempts.
+
+---
+
+# SPL Troubleshooting Lessons Learned
